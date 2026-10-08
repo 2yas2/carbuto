@@ -25,7 +25,15 @@ Il faut que PHP puisse faire des requêtes HTTP (`allow_url_fopen`), car les deu
 
 ## Captures d'écran
 
-[À COMPLÉTER]
+Page d'accueil, thème classique :
+
+![accueil classique](captures/accueil-classique.png)
+
+Page d'accueil, thème sombre :
+
+![accueil sombre](captures/accueil-sombre.png)
+
+Page « Développeur » (film aléatoire et géolocalisation) : [À COMPLÉTER : capture]
 
 ## Ce que j'ai fait
 
