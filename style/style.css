@@ -4,33 +4,56 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #eef1ee;
+    font-size: 13pt;
+    line-height: 1.6;
+    background-color: #f5f7f5;
     color: #1a1c1a;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, h3 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
     color: #111411;
 }
 
 h1 {
     font-size: 20pt;
+    margin: 0 0 4px 0;
 }
 
 h2 {
     font-size: 15pt;
+    margin: 0 0 14px 0;
 }
 
 h3 {
     font-size: 12pt;
+    margin: 0 0 10px 0;
     color: #2d7a0a;
 }
 
 p {
     font-size: 12pt;
     color: #374237;
+    margin-top: 0;
+    margin-bottom: 10px;
     text-align: justify;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+    font-size: 12pt;
+    color: #374237;
 }
 
 a {
@@ -39,104 +62,499 @@ a {
 }
 
 a:hover {
+    color: #1a4a06;
     text-decoration: underline;
+}
+
+strong {
+    color: #111411;
+    font-weight: bold;
 }
 
 .bloc-entete {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
 }
 
 .logo-entete {
     height: 80px;
+    width: auto;
+    display: block;
+}
+
+.petit-texte {
+    color: #6a7a6a;
+    font-size: 9.5pt;
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.phrase-entete {
+    color: #4a5a4a;
+    margin: 0;
+    font-size: 10.5pt;
+}
+
+.navigation-principale {
+    display: flex;
+    align-items: center;
 }
 
 .navigation-principale ul {
     list-style: none;
+    margin: 0;
     padding: 0;
+    display: flex;
 }
 
 .navigation-principale li {
-    display: inline;
-    margin-right: 15px;
+    display: block;
+    margin: 0;
 }
 
 .navigation-principale a {
+    display: inline-block;
     color: #374237;
+    padding: 6px 16px;
+    font-size: 11pt;
     font-weight: bold;
+    border-bottom: 2px solid transparent;
+}
+
+.navigation-principale a:hover {
+    color: #2d7a0a;
+    border-bottom: 2px solid #2d7a0a;
+    text-decoration: none;
 }
 
 .navigation-principale a.actif {
     color: #2d7a0a;
     border-bottom: 2px solid #2d7a0a;
+    text-decoration: none;
 }
 
 main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 100%;
 }
 
 .page-avec-menu {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 24px 40px 24px;
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    flex: 1;
+}
+
+.page-simple {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 28px 24px 40px 24px;
+    flex: 1;
+}
+
+.contenu-page {
+    flex: 1;
+    min-width: 0;
 }
 
 #menu-lateral {
     background-color: #ffffff;
-    border: 1px solid #cdd8cd;
-    border-radius: 6px;
-    width: 200px;
-    padding: 15px;
+    border: 1px solid #dce5dc;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    width: 185px;
+    padding: 16px;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
 }
 
 #menu-lateral ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+}
+
+#menu-lateral li {
+    border-bottom: 1px solid #e4ece4;
+    margin-bottom: 0;
+}
+
+#menu-lateral a {
+    display: block;
+    color: #374237;
+    padding: 7px 2px;
+    font-size: 11pt;
+}
+
+#menu-lateral a:hover {
+    color: #2d7a0a;
+    text-decoration: none;
 }
 
 article {
     background-color: #ffffff;
-    border: 1px solid #cdd8cd;
-    border-radius: 6px;
-    padding: 20px;
-    margin-bottom: 20px;
+    border: 1px solid #dce5dc;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    padding: 20px 24px;
+    margin-bottom: 24px;
+}
+
+section {
+    margin-bottom: 30px;
 }
 
 .article-titre {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
     text-align: center;
+    padding: 10px 0 0 0;
+    margin-bottom: 2px;
 }
 
 .date-film {
+    text-align: center;
+    font-size: 11pt;
+    color: #374237;
+    margin-bottom: 18px;
+}
+
+.label-date {
     color: #4d8e10;
     font-weight: bold;
 }
 
 .article-images {
-    text-align: center;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
 }
 
-.figure-poster img, .figure-banniere img {
+.figure-poster {
+    width: 175px;
+    min-width: 175px;
+}
+
+.figure-banniere {
+    flex: 1;
+    min-width: 0;
+}
+
+.figure-poster img {
+    width: 175px;
+    height: 252px;
+    object-fit: cover;
     border-radius: 8px;
-    max-width: 100%;
-    height: auto;
+    display: block;
+}
+
+.figure-banniere img {
+    width: 100%;
+    height: 252px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.figure-carte {
+    text-align: center;
+    margin: 0;
 }
 
 .legende {
-    font-size: 10pt;
+    font-size: 9.5pt;
     font-style: italic;
     color: #8a9a8a;
+    text-align: center;
+    margin-top: 6px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 12px 6px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+th {
+    background-color: #2d7a0a;
+    color: #ffffff;
+    padding: 14px 24px;
+    text-align: left;
+    font-size: 11pt;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+td {
+    padding: 14px 24px;
+    background-color: #f4f7f4;
+    border-radius: 4px;
+    font-size: 11pt;
+    color: #374237;
+    vertical-align: middle;
+}
+
+.histogramme {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0 0;
+}
+
+.ligne-histo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 11pt;
+    gap: 12px;
+}
+
+.histo-label {
+    width: 240px;
+    color: #374237;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.histo-zone {
+    flex: 1;
+    background-color: #e4ece4;
+    border-radius: 4px;
+    height: 22px;
+    overflow: hidden;
+}
+
+.histo-barre {
+    display: block;
+    height: 100%;
+    background-color: #2d7a0a;
+    border-radius: 4px;
+}
+
+.histo-valeur {
+    font-weight: bold;
+    color: #2d7a0a;
+    width: 40px;
+    text-align: right;
+}
+
+.resume-stats {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0 0;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.bloc-stat {
+    flex: 1;
+    min-width: 180px;
+    background-color: #f4f7f4;
+    border-radius: 6px;
+    padding: 18px 20px;
+    text-align: center;
+}
+
+.stat-valeur {
+    display: block;
+    font-size: 18pt;
+    font-weight: bold;
+    color: #2d7a0a;
+    margin-bottom: 6px;
+}
+
+.stat-libelle {
+    display: block;
+    color: #374237;
+    font-size: 10.5pt;
+}
+
+.liste-carburants {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.carte-carburant {
+    flex: 1;
+    min-width: 260px;
+    background-color: #f4f7f4;
+    border-radius: 6px;
+    padding: 14px 18px;
+}
+
+.carte-carburant h3 {
+    margin: 0 0 4px 0;
+    color: #2d7a0a;
+}
+
+.type-carburant {
+    color: #6a7a6a;
+    font-style: italic;
+    font-size: 10pt;
+    margin: 0 0 8px 0;
+}
+
+.infos-carburant {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+    font-size: 10.5pt;
+    color: #374237;
+}
+
+.infos-carburant li {
+    margin-bottom: 4px;
+}
+
+select, button {
+    font-size: 11pt;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #dce5dc;
+    background: white;
+    cursor: pointer;
+}
+
+button {
+    background-color: #2d7a0a;
+    color: white;
+    border: none;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background-color: #1f5a07;
+    transform: translateY(-1px);
+}
+
+.stations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.station-card {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.station-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.station-card h3 {
+    font-size: 16pt;
+    margin: 0 0 10px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #2d7a0a;
+    color: #1a3e60;
+}
+
+.station-card .adresse {
+    font-size: 11pt;
+    color: #5a6a5a;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0e8e0;
+}
+
+.carburants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.prix-badge {
+    background: #e8f0e8;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11pt;
+    font-weight: 500;
+    color: #2d7a0a;
+}
+
+.prix-badge span {
+    font-weight: bold;
+    color: #1a4a06;
+}
+
+.aucun-prix {
+    color: #b0b8b0;
+    font-style: italic;
+    font-size: 11pt;
+    margin: 10px 0 0 0;
+}
+
+.erreur {
+    background: #f8e8e8;
+    color: #c0392b;
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 4px solid #c0392b;
 }
 
 footer {
     background-color: #1a1c1a;
-    color: #7a8a7a;
-    padding: 20px;
-    text-align: center;
     border-top: 3px solid #2d7a0a;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.bloc-footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.logo-footer {
+    height: 38px;
+    width: auto;
+    display: block;
+}
+
+.bloc-footer p {
+    color: #7a8a7a;
+    margin: 0 0 4px 0;
+    font-size: 10.5pt;
+    text-align: left;
 }
 
 .bloc-footer a {
     color: #7ec85a;
+}
+
+.bloc-footer a:hover {
+    color: #aae080;
+    text-decoration: none;
 }

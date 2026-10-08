@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carburants>
+    <carburant>
+        <nom>SP95</nom>
+        <type>Essence</type>
+        <description>Essence sans plomb 95, adaptée à la plupart des véhicules essence récents.</description>
+        <prix_moyen>1.85</prix_moyen>
+        <indice_octane>95</indice_octane>
+    </carburant>
+    <carburant>
+        <nom>SP98</nom>
+        <type>Essence</type>
+        <description>Essence sans plomb 98, recommandée pour les moteurs sportifs ou anciens.</description>
+        <prix_moyen>1.92</prix_moyen>
+        <indice_octane>98</indice_octane>
+    </carburant>
+    <carburant>
+        <nom>Gazole</nom>
+        <type>Diesel</type>
+        <description>Carburant diesel pour les moteurs Diesel, courant sur le réseau français.</description>
+        <prix_moyen>1.74</prix_moyen>
+        <indice_octane></indice_octane>
+    </carburant>
+    <carburant>
+        <nom>E10</nom>
+        <type>Essence</type>
+        <description>Essence sans plomb contenant jusqu'à 10% d'éthanol, compatible avec la majorité des véhicules essence.</description>
+        <prix_moyen>1.82</prix_moyen>
+        <indice_octane>95</indice_octane>
+    </carburant>
+    <carburant>
+        <nom>E85</nom>
+        <type>Biocarburant</type>
+        <description>Superéthanol contenant jusqu'à 85% d'éthanol, réservé aux véhicules flex-fuel.</description>
+        <prix_moyen>0.95</prix_moyen>
+        <indice_octane>104</indice_octane>
+    </carburant>
+    <carburant>
+        <nom>GPLc</nom>
+        <type>Gaz</type>
+        <description>Gaz de pétrole liquéfié carburant, alternative économique et moins polluante.</description>
+        <prix_moyen>0.99</prix_moyen>
+        <indice_octane></indice_octane>
+    </carburant>
+</carburants>

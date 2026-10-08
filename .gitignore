@@ -11,3 +11,12 @@ vendor/
 
 # reponse d'api avec une vraie adresse ip
 ressources/geo.json
+
+# fichiers systeme et temporaires
+.DS_Store
+._*
+__MACOSX/
+.~lock.*
+
+# historique des consultations (log, recree automatiquement)
+ressources/historique.csv
