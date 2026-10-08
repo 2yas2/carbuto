@@ -1,0 +1,147 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1c1a;
+    color: #eef1ee;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 20pt;
+}
+
+h2 {
+    font-size: 15pt;
+}
+
+h3 {
+    font-size: 12pt;
+    color: #7ec85a;
+}
+
+p {
+    font-size: 12pt;
+    color: #cdd8cd;
+    text-align: justify;
+}
+
+a {
+    color: #7ec85a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.bloc-entete {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.logo-entete {
+    height: 80px;
+}
+
+.navigation-principale ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation-principale li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.navigation-principale a {
+    color: #eef1ee;
+    font-weight: bold;
+}
+
+.navigation-principale a.actif {
+    color: #7ec85a;
+    border-bottom: 2px solid #7ec85a;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-avec-menu {
+    display: flex;
+    gap: 20px;
+}
+
+#menu-lateral {
+    background-color: #2a2d2a;
+    border: 1px solid #374237;
+    border-radius: 6px;
+    width: 200px;
+    padding: 15px;
+}
+
+#menu-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu-lateral a {
+    color: #eef1ee;
+}
+
+article {
+    background-color: #2a2d2a;
+    border: 1px solid #374237;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.article-titre {
+    text-align: center;
+}
+
+.date-film {
+    color: #7ec85a;
+    font-weight: bold;
+}
+
+.article-images {
+    text-align: center;
+}
+
+.figure-poster img, .figure-banniere img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #4a5a4a;
+}
+
+.legende {
+    font-size: 10pt;
+    font-style: italic;
+    color: #8a9a8a;
+}
+
+footer {
+    background-color: #000000;
+    color: #7a8a7a;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid #2d7a0a;
+}
+
+.bloc-footer a {
+    color: #7ec85a;
+}
