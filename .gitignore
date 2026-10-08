@@ -1,0 +1,13 @@
+# secrets
+.env
+
+# ide
+.idea/
+.vscode/
+
+# dependances et logs
+vendor/
+*.log
+
+# reponse d'api avec une vraie adresse ip
+ressources/geo.json
