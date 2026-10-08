@@ -1,19 +1,29 @@
 # Carbuto
 
-Site web en PHP qui devait permettre de consulter les prix des carburants dans les stations-service en France. Dans cette version du dépôt, seules la page d'accueil et la page « Développeur » sont présentes : un film aléatoire du studio Ghibli et la géolocalisation du visiteur à partir de son adresse IP. Les autres liens du menu (prix carburant, statistiques, plan du site) pointent vers `#` dans ce dossier.
+Site web en PHP qui permet de consulter les prix des carburants dans les stations-service de France métropolitaine. On choisit une région sur une carte, puis un département et une ville, et le site affiche les stations avec leurs prix. Il y a aussi une page de statistiques sur les villes les plus consultées, un plan du site et une page « Développeur » (film aléatoire et géolocalisation par adresse IP).
 
 Projet réalisé en L2 Informatique (S4, 2025-2026), dans l'UE Développement Web, à deux avec Mariam Traore.
+
+Versions en ligne indiquées dans le projet : https://aittalb.arbusmegacorp.top/ et https://traore.arbusmegacorp.top/
 
 ## Technos
 
 - PHP, HTML, CSS (deux thèmes : classique et sombre)
-- API Ghibli (https://ghibliapi.vercel.app/films)
-- API REST IP2Location (https://api.ip2location.io)
+- Cookies pour le thème et la dernière recherche
+- Fichiers CSV (villes, départements, régions, historique des consultations) et un fichier XML (infos sur les carburants)
+- API des prix des carburants (data.economie.gouv.fr)
+- API Ghibli (film aléatoire), avec `ressources/films.json` en secours
+- API REST IP2Location (géolocalisation par adresse IP)
+- Doxygen pour la documentation du code (`Doxyfile`, dossier `doc/`)
+
+Il n'y a pas de base de données à importer : tout est stocké dans les fichiers du dossier `ressources/`.
 
 ## Lancer le projet
 
-1. Copier `.env.example` en `.env` et mettre sa clé IP2Location dans `IP2LOCATION_KEY`.
-2. Lancer un serveur PHP depuis le dossier du projet :
+Il faut PHP (avec `allow_url_fopen` activé) et l'extension XML.
+
+1. Copier `.env.example` en `.env` et mettre sa clé IP2Location dans `IP2LOCATION_KEY`. Sans clé, le site marche mais la géolocalisation est désactivée.
+2. Lancer le serveur depuis la racine du projet :
 
 ```
 php -S localhost:8000
@@ -21,28 +31,48 @@ php -S localhost:8000
 
 3. Ouvrir http://localhost:8000/index.php
 
-Il faut que PHP puisse faire des requêtes HTTP (`allow_url_fopen`), car les deux API sont appelées avec `file_get_contents`.
+Le fichier `ressources/historique.csv` (consultations des villes) est créé tout seul à la première recherche d'une ville, le dossier `ressources/` doit donc être accessible en écriture. Il n'est pas publié dans le dépôt.
 
 ## Captures d'écran
 
-Page d'accueil, thème classique :
+Accueil (thème classique et thème sombre) :
 
 ![accueil classique](captures/accueil-classique.png)
 
-Page d'accueil, thème sombre :
-
 ![accueil sombre](captures/accueil-sombre.png)
 
-Page « Développeur » (film aléatoire et géolocalisation) : [À COMPLÉTER : capture]
+Plan du site :
+
+![plan du site](captures/plan-du-site.png)
+
+Statistiques des consultations (diagramme en barres et classement) :
+
+![statistiques classique](captures/statistiques-classique.png)
+
+![statistiques sombre](captures/statistiques-sombre.png)
+
+Prix des carburants (carte des régions) :
+
+![prix des carburants](captures/prix-carburants.png)
+
+Choix du département et de la ville :
+
+![département et ville](captures/prix-departement-ville.png)
+
+Les captures de la liste des stations et de la page « Développeur » ne sont pas là : elles demandent les API en ligne.
+
+[À COMPLÉTER : capture d'une liste de stations avec les prix]
+
+[À COMPLÉTER : capture de la page « Développeur » avec la géolocalisation]
 
 ## Ce que j'ai fait
 
 - la page d'accueil
-- la page du film aléatoire
+- la page « Développeur » : film aléatoire
 - le plan du site
 - le diagramme des statistiques de visites
 - la géolocalisation des visiteurs par adresse IP avec l'API REST IP2Location
 
 Mariam Traore a fait le reste.
 
-[À COMPLÉTER] le plan du site et le diagramme des statistiques ne sont pas dans ce dossier : ajouter les fichiers ou retirer ces deux lignes.
+Le dossier `rapport/` contient le rapport du projet (`rapport.pdf`).
