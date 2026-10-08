@@ -59,12 +59,6 @@ Choix du département et de la ville :
 
 ![département et ville](captures/prix-departement-ville.png)
 
-Les captures de la liste des stations et de la page « Développeur » ne sont pas là : elles demandent les API en ligne.
-
-[À COMPLÉTER : capture d'une liste de stations avec les prix]
-
-[À COMPLÉTER : capture de la page « Développeur » avec la géolocalisation]
-
 ## Ce que j'ai fait
 
 - la page d'accueil
