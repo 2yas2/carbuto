@@ -4,8 +4,6 @@ Site web en PHP qui permet de consulter les prix des carburants dans les station
 
 Projet réalisé en L2 Informatique (S4, 2025-2026), dans l'UE Développement Web, à deux avec Mariam Traore.
 
-Versions en ligne indiquées dans le projet : https://aittalb.arbusmegacorp.top/ et https://traore.arbusmegacorp.top/
-
 ## Technos
 
 - PHP, HTML, CSS (deux thèmes : classique et sombre)
